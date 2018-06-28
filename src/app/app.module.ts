@@ -3,21 +3,24 @@ import { BrowserModule } from '@angular/platform-browser';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
 
-import { AboutPage } from '../pages/about/about';
-import { ContactPage } from '../pages/contact/contact';
 import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
+import { AudioPage } from '../pages/audio/audio';
+import { RecordPage } from '../pages/record/record';
+import { InputPage } from '../pages/input/input';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { AudiotoggleProvider } from '../providers/audiotoggle/audiotoggle';
 
 @NgModule({
   declarations: [
     MyApp,
-    AboutPage,
-    ContactPage,
     HomePage,
-    TabsPage
+    TabsPage,
+    AudioPage,
+    RecordPage,
+    InputPage
   ],
   imports: [
     BrowserModule,
@@ -26,15 +29,17 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    AboutPage,
-    ContactPage,
     HomePage,
-    TabsPage
+    TabsPage,
+    AudioPage,
+    RecordPage,
+    InputPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    AudiotoggleProvider
   ]
 })
 export class AppModule {}
