@@ -12,6 +12,7 @@ import { InputPage } from '../pages/input/input';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { AudiotoggleProvider } from '../providers/audiotoggle/audiotoggle';
+import { MediaCaptureProvider } from '../providers/media-capture/media-capture';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,8 @@ import { AudiotoggleProvider } from '../providers/audiotoggle/audiotoggle';
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    AudiotoggleProvider
+    AudiotoggleProvider,
+    MediaCaptureProvider
   ]
 })
 export class AppModule {}
