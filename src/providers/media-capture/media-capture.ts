@@ -18,9 +18,16 @@ export class MediaCaptureProvider {
   startRecording(){
     var options = { limit: 3 };
     try{
+<<<<<<< HEAD
       Capture.navigator.device.capture.captureAudio(this.captureSuccess, this.captureError, options);
     } catch (e){
       console.log("An error occured:");
+=======
+      console.log("Starting to record")
+      Capture.navigator.device.capture.captureAudio(this.captureSuccess, this.captureError, options);
+    } catch (e){
+      console.log("An error occured trying to record:");
+>>>>>>> b72e9af55b2a0aa516b02623179629b4c656e07c
       console.log(e.message);
       console.log(e);
     }
