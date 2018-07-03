@@ -7,6 +7,7 @@ import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
 import { AudioPage } from '../pages/audio/audio';
 import { RecordPage } from '../pages/record/record';
+import { Record2Page } from '../pages/record2/record2';
 import { InputPage } from '../pages/input/input';
 
 import { StatusBar } from '@ionic-native/status-bar';
@@ -27,6 +28,7 @@ import { IonicStorageModule } from '@ionic/storage';
     TabsPage,
     AudioPage,
     RecordPage,
+    Record2Page,
     InputPage
   ],
   imports: [
@@ -41,6 +43,7 @@ import { IonicStorageModule } from '@ionic/storage';
     TabsPage,
     AudioPage,
     RecordPage,
+    Record2Page,
     InputPage
   ],
   providers: [
