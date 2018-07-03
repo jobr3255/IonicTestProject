@@ -14,6 +14,12 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { AudiotoggleProvider } from '../providers/audiotoggle/audiotoggle';
 import { MediaCaptureProvider } from '../providers/media-capture/media-capture';
 
+import { MediaCapture } from '@ionic-native/media-capture';
+import { Media } from '@ionic-native/media';
+import { File } from '@ionic-native/file';
+
+import { IonicStorageModule } from '@ionic/storage';
+
 @NgModule({
   declarations: [
     MyApp,
@@ -25,7 +31,8 @@ import { MediaCaptureProvider } from '../providers/media-capture/media-capture';
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+    IonicStorageModule.forRoot()
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -41,7 +48,10 @@ import { MediaCaptureProvider } from '../providers/media-capture/media-capture';
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     AudiotoggleProvider,
-    MediaCaptureProvider
+    MediaCaptureProvider,
+    MediaCapture,
+    Media,
+    File
   ]
 })
 export class AppModule {}
